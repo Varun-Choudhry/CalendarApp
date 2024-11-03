@@ -8,14 +8,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.varun.CalendarApp.model.Meeting;
+import com.varun.CalendarApp.model.MeetingModel;
 import com.varun.CalendarApp.service.MeetingService;
 
 public class MeetingServiceTest {
@@ -36,7 +35,7 @@ public class MeetingServiceTest {
 	
 	@Test
 	public void testBookMeeting() {
-		Meeting meeting = new Meeting("Test meeting", LocalDateTime.now(), 1.5 , List.of("test@gmail.com","test1@gmail.com"));
+		MeetingModel meeting = new MeetingModel("Test meeting", LocalDateTime.now(), 1.5 , List.of("test@gmail.com","test1@gmail.com"));
 		Long meetingId = meetingService.bookMeeting(meeting);
 		assertNotEquals(meetingId,0L);
 	}

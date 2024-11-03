@@ -1,30 +1,22 @@
 package com.varun.CalendarApp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-
-@Entity
-@Table(name="Employee")
-
-public class Employee {
+public class EmployeeModel {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long employeeId;
 	private String employeeEmailId;
 	private String firstName;
 	private String lastName;
-	public Employee(Long employeeId, String employeeEmailId, String firstName, String lastName) {
+	private CalendarModel calender;
+	
+	public EmployeeModel(Long employeeId, String employeeEmailId, String firstName, String lastName, CalendarModel calender) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeEmailId = employeeEmailId;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.calender = calender;
 	}
+	
 	public Long getEmployeeId() {
 		return employeeId;
 	}
@@ -49,6 +41,15 @@ public class Employee {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	public CalendarModel getCalender() {
+		return calender;
+	}
+	public void setCalender(CalendarModel calender) {
+		this.calender = calender;
+	}
+	
+	
+	
 	
 	
 }
