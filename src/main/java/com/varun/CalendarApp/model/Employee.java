@@ -14,7 +14,7 @@ public class Employee {
 	private String lastName;
 	private Calendar calender;
 	
-	public Employee(int employeeId, String employeeEmailId, String firstName, String lastName, Calendar calender) {
+	public Employee(Long employeeId, String employeeEmailId, String firstName, String lastName, Calendar calender) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeEmailId = employeeEmailId;
@@ -23,10 +23,10 @@ public class Employee {
 		this.calender = calender;
 	}
 	
-	public int getEmployeeId() {
+	public Long getEmployeeId() {
 		return employeeId;
 	}
-	public void setEmployeeId(int employeeId) {
+	public void setEmployeeId(Long employeeId) {
 		this.employeeId = employeeId;
 	}
 	public String getEmployeeEmailId() {

@@ -9,18 +9,18 @@ public class Meeting {
 	private Long meetingId;
 	private String title;
 	private LocalDateTime startTime;
-	private Duration duration;
-	private List<Employee> participants;
+	private Double duration;
+	private List<String> participants;
 	
-	public Meeting(Long meetingId, String title, LocalDateTime startTime, Duration duration,
-			List<Employee> participants) {
-		super();
-		this.meetingId = meetingId;
+	public Meeting(String title, LocalDateTime startTime, Double duration,
+			List<String> participants) {
 		this.title = title;
 		this.startTime = startTime;
 		this.duration = duration;
 		this.participants = participants;
 	}
+	
+	
 	
 	public Long getMeetingId() {
 		return meetingId;
@@ -40,16 +40,16 @@ public class Meeting {
 	public void setStartTime(LocalDateTime startTime) {
 		this.startTime = startTime;
 	}
-	public Duration getDuration() {
+	public Double getDuration() {
 		return duration;
 	}
-	public void setDuration(Duration duration) {
+	public void setDuration(Double duration) {
 		this.duration = duration;
 	}
-	public List<Employee> getParticipants() {
+	public List<String> getParticipants() {
 		return participants;
 	}
-	public void setParticipants(List<Employee> participants) {
+	public void setParticipants(List<String> participants) {
 		this.participants = participants;
 	}
 	
